@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+        ///  reverse method
+
+    const fruits = ["Banana", "Orange", "Apple", "Mango"];
+
+    fruits.reverse()
+
+    console.log(fruits);
+
+    console.log(fruits);
+
+
+
+    //// *************** The reverse() method overwrites the original array.
+
+
+
+
+
+
+    ///  reverse with prompt
+
+    // let user = prompt("Enter a sentence: ").split(" ");
+
+    // console.log(user.reverse()); 
+
+    // python da reverse print icinde kullanildiginda none alinir. burada ise calisiyor.
+
+
+
+
+
+
+
+    // array with for loop 
+
+    function reverseArr(input) {
+    var ret = new Array;
+    for(var i = input.length-1; i >= 0; i--) {
+        ret.push(input[i]);
+    }
+    return ret;
+    }
+
+    var a = [3,5,7,8]
+    var b = reverseArr(a);
+
+    console.log(b);
+
+
+
+
+
+
+    ////  new Array ile yeni bir  bos array olustururuz.
+
+
+    // var a = new Array;
+
+    // console.log(a);
+
+
+
+
+
+
+
+    // with for loop and prompt
+
+    // eger tanimlama esnaisnda length - 1 demez isek ilk eleman olmayacagi icin undefined olur
+
+
+    // function myReverse (input = prompt("Please enter a sentence").split(" ")) {
+    //     var empty = new Array;
+    //     for (i = (input.length - 1); i >= 0; i--) {
+    //         empty.push(input[i]);
+    //     }
+
+    //     return empty;
+    // }
+
+    // console.log(myReverse());
+
+
+
+
+
+
+
+
+
+
+
+    //  concat reverse:
+
+    let aa = [20, 30, 40, 50];
+
+    let bb = [].concat(aa.reverse());
+
+    console.log(bb);
+
+
+
+
+
+
+
+
+
+    ////////////   reverse with sort:
+
+
+
+
+    let cc = ["e", "b", "d", "c"];
+    let dd = [100, 80, 90, 50, 60]
+
+    // console.log(cc.sort());
+    // console.log(dd.sort());
+
+    // sort methodu burada tüm sayinin büyük ve kücüklügüne bakmiyor. ilk rakam kücük ise kücük diyor.
+
+    // ve sort methodu listenin orijinalini bozdugu icin asagidaki reverse de dogru calismiyor
+
+
+    let reverse = input => input.sort(input => -1);
+
+    console.log(reverse(cc));
+    console.log(reverse(dd));
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+</html>
