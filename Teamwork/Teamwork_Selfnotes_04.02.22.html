@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <!-- HTML5'te web sayfaları, veriyi yerel (local) olarak, tarayıcı (browser) içinde saklayabilir. Veri, sadece sorgulama olduğu zaman kullanılır; eskisi gibi sunucunun her talebinde verinin tekrar yüklenmesi söz konusu değildir. HTML5'in bir diğer büyük avantajı ise, web sitesi ya da mobil uygulamanın performansını kötü etkilemeden, büyük miktarlarda veri depolama olanağı sağlamasıdır. Veriyi, yerelde saklamak için HTML5'in sağladığı iki yeni nesne mevcuttur:
+
+    localStorage: Son kullanma tarihi söz konusu olmadan veriyi depolama olanağı sağlar. Örneğin, istemci tarafında kimlik doğrulama bilgisinin saklanması gibi.
+    sessionStorage: Veriyi sadece bir oturum için saklar. -->
+
+
+    <!-- Çerezler (Cookies)
+HTML5'ten önce, veriyi yerelde saklamak için tek yol çerezlerdi. En basit tanımıyla çerez, istemci makinasına kopya edilmiş bir metin dosyasıdır. Çerezlerin hiç şüphesiz bazı sakıncaları mevcuttu;
+
+Performans azalması
+Maksimum 4KB bellek alanı
+Güvenlik sorunları -->
+
+
+
+<!-- Oturum boyunca depolama (Session Storage)
+localStorage nesnesine ek olarak, yerelde veri depolamayı, sessionStorage nesnesini kullanarak da gerçekleştirebilirsiniz. Sistem performansını düşürmeden, sessionStorage nesnesiyle çok büyük miktarda veri depolamak mümkündür. sessionStorage nesnesiyle bilgi depolanması ya da saklanması sadece bir oturum için gerçekleşir; tarayıcı kapatılınca veriler silinir.
+
+sessionStorage nesnesini kullanmak için yapmanız gereken tek şey, JavaScript'te sessionStorage nesnesini değiştirmektir (ekleme, düzenleme, silme işlemleri) -->
+
+
+<!-- Session Storage'da depolanmış verileri elde etmek
+Session Storage bölümünde sakladığınız verileri elde etmek için yapmanız gereken şey, sessionStorage.key(i) fonksiyonunu kullanarak bir döngü oluşturmaktır: -->
+
+
+
+
+
+
+<!-- HTML Web Depolama nedir?
+
+Web uygulamalarinda verileri kullanıcının tarayıcısında yerel olarak saklama imkanı sağlar HTML5'ten önce, uygulama verilerinin her sunucu isteğine dahil edilen çerezlerde saklanması gerekiyordu. Web depolama  daha güvenlidir ve web sitesi performansını etkilemeden yerel olarak büyük miktarlarda veri depolanabilir.
+Çerezlerin aksine, depolama sınırı çok daha büyük (en az 5 MB), Web depolama etki alanı ve protokol başına. Tek bir kaynaktan gelen tüm sayfalar aynı verilere depolanabilir ve erişilebilir.
+Nerede kullanılabilir?
+
+Çerezleri kullandığımız gibi amaçlar için kullanılabilir örneğin bir alışveriş sitesi düşünün sepete eklediğiniz ürünlerin kimlik no (idno) adet sayısını burada saklayabilirsiniz özellikle localStorage bunun için çok uygun öyle ki ziyaretçi herhangi bir sebepten sayfayı kapatsa veya tarayıcı çökse tarayıcıda tutulan veriler sayfayı tekrar açtığında orada duruyor olacaktır çünkü Tarayıcı kapalıyken veriler silinmeyecek ve ertesi gün, hafta veya yıl kullanılabilecektir, bu sayede ziyaretçi tekrar tarayıcıdan siteye geldiğinde önceden eklediği ürünleri tekrar ekleme derdine düşmeyecek. Tabiki çerezlerdeki gibi tarayıcı temizliği veriyi silecek olduğunu da unutmayalım. -->
+
+
+
+<!-- HTML Web Depolama Nesneleri
+
+HTML web depolama, istemcide veri depolamak için iki nesne sağlar
+
+window.localStorage : son kullanma tarihi olmayan verileri depolar
+LocalStorage nesnesi son kullanma tarihi olmayan verileri depolar. Tarayıcı kapalıyken veriler silinmeyecek ve ertesi gün, hafta veya yıl kullanılabilecektir.
+
+window.sessionStorage : bir oturum için veri depolar (tarayıcı sekmesi kapatıldığında veriler kaybolur) 
+
+SessionStorage Nesnesi
+
+SessionStorage nesnesi, yalnızca bir oturum için verileri depolaması dışında localStorage nesnesine eşittir. Tek farkı Kullanıcı bir tarayıcı sekmesini kapattığında veriler silinir. Ayrıca tarayıcı konsolunda takip etmek için Local Storage değil de Session Storage kısmına bakmanız gerektiğini unutmayın.-->
+
+
+
+
+
+<!-- A hexadecimal color is specified with: #RRGGBB, where the RR (red), GG (green) and BB (blue) hexadecimal integers specify the components of the color. -->
+
+<!-- Gri tonları genellikle 3 ışık kaynağının tümü için eşit değerler kullanılarak tanımlanır: -->
+
+
+
+
+
+
+
+
+
+
+
+<script>
+
+    // burada uzunluk 101 olacak ve aradaki degerler de 97 tane bos görünecektir
+
+    var a = ['dog','lion','hen'];
+    a[100] = 'horse';
+
+    console.log(a);
+    console.log(a.length);
+
+
+
+
+
+    //// Which statement creates a new function called discountPrice?
+
+    // let discountPrice = function (price) {
+    //      return price * 0.85;
+    // };
+
+    // console.log(discountPrice(10));
+
+
+
+
+        //  let ile olusturma hatali
+
+    // let discountPrice (price) {
+    //     return price * 0.85;
+    // };
+
+    // console.log(discountPrice(10));
+
+
+
+        /// hatali
+
+//     let function = discountPrice(price) {
+//  return price * 0.85;
+// };
+
+// console.log(discountPrice(10));
+
+
+
+
+    /// bu da calisir 
+
+// discountPrice = function (price) {
+//  return price * 0.85;
+// };
+
+// console.log(discountPrice(10));
+
+
+
+
+
+
+
+
+// use strict nedir?
+// JavaScript use strict anahtar kelimesi kullanım amacı kodun katı kurallı olarak çalıştırılacağını belirtir.
+
+// Katı kurallı kullanımda değişken oluşturulmadan kullanmaya izin verilmez.
+
+// use strict kullanımı
+// JavaScript kodlarının katı kurallı olarak yorumlanması için kod veya fonksiyon başına “use strict”; yazmak yeterli olacaktır.
+
+// Katı kural tanımı kod başına yazılırsa tüm kodlar katı kurallı olarak çalışacaktır.
+
+
+// strict konusunda detayli bilgi 
+// https://www.yusufsezer.com.tr/javascript-use-strict/#:~:text=use%20strict%20nedir%3F,de%C4%9Fi%C5%9Fken%20olu%C5%9Fturulmadan%20kullanmaya%20izin%20verilmez.
+
+</script>
+
+
+<script>
+
+    // burada use strict kullanmazsak kodumuz calisir
+
+    // "use strict";
+
+    // a = 2;
+    // b = 3;
+
+    // console.log(a, b);
+</script>
+
+
+
+
+<script>
+
+    // sadece func icinde ise func i etkiler
+
+    // function sum () {
+    //     "use strict";
+    //     number1 = 2;
+    //     number2 = 3;
+    //     return number1 + number2;
+    // }
+
+    // console.log(sum());
+
+</script>
+
+
+
+
+
+<script>
+
+    ///  delete:
+
+    let myArray = [1, 2, 3, 4, 5];
+
+    console.log(myArray);
+
+    delete myArray[1];
+
+    console.log(myArray);
+
+    console.log(myArray.length);
+
+    // delete isleminden sonra,  array uzunlugumuz yine 5 cikar ama 1. index teki eleman empty olarak cikar
+
+
+
+    // delete ile array items larini silebiliriz ama bir array i silmiyor
+
+    delete myArray;
+
+    console.log(myArray);
+
+
+
+
+
+    /// delete stringlerde calismaz
+
+    let myString = "abcdef";
+
+    delete myString[0];
+
+    console.log(myString);
+
+
+
+
+    let myString2 = new String("abcdef");
+
+    delete myString2[1];
+
+    console.log(myString2);
+
+</script>
+
+
+
+
+
+<script>
+
+    // Java script de iki parametre: 
+
+    // 1: implicit(gizli)
+    // 2: explicit(acik)
+    
+</script>
+
+</body>
+</html>
