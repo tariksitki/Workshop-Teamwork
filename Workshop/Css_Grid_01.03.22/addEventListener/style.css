@@ -10,7 +10,7 @@
     display: flex;
     width: 100vw;
     justify-content: space-evenly;
-    background-color: aqua;
+    /* background-color: aqua; */
 }
 
 button {
