@@ -12,6 +12,8 @@ headerBtn.addEventListener("click", () => {
    
     if (!container.innerHTML.includes(`<div class="box box1">Header</div>`)) {
         container.innerHTML += `<div class="box box1">Header</div>`;
+        console.log(container.innerHTML);
+        console.log(container.innerText);
     }   else {
         let header = document.querySelector(".box1");
         header.remove();

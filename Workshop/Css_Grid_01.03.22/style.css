@@ -10,11 +10,12 @@
     display: grid;
     grid-template-areas: 
     "header header header header"
+    /* "header header header header" */
     "box1 box2 box3 sidebar"
     "main main main sidebar"
     "footer footer footer footer";
-    width: 80%;
-    height: 100vh;
+    width: 70%;
+    height: 110vh;
     margin: auto;
     text-align: center;
     gap: 0.5rem 0.5rem;
@@ -30,36 +31,35 @@
 
 .box1 {
     grid-area: header;
-    height: 20vh;
+    /* height: 20vh; */
 }
 
 .box2 {
     grid-area: box1;
-    height: 40vh;
+    /* height: 40vh; */
 }
 
 .box3 {
     grid-area: box2;
-    height: 40vh;
+    /* height: 40vh; */
 } 
 
 .box4 {
     grid-area: box3;
-    height: 40vh;
+    /* height: 40vh; */
 }
 
 .box5 {
     grid-area: sidebar;
-    height: 62vh;
+    /* height: 62vh; */
 }
 
 .box6 {
     grid-area: main;
-    height: 20vh;
+    /* height: 20vh; */
 }
 
 .box7 {
     grid-area: footer;
-    height: 20vh;
+    /* height: 20vh; */
 }
-
