@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+
+async function f() {
+ let result = 'first!';
+ let promise = new Promise((resolve, reject) => {
+ setTimeout(() => resolve('done!'), 1000);
+ });
+ result = await promise;
+ console.log(result);
+}
+f();
+
+
+
+        //////////////////////////////////7
+
+
+
+        let x = 0;
+async function test() {
+ x += await 2;
+ console.log(x);
+}
+test();
+x += 1;
+console.log(x);
+
+
+
+    //////////////////////////7
+
+
+    const topics = ["cooking", "art", "history"]
+
+    // const first = ["cooking", "art", "history"]
+    // const [] = ["cooking", "art", "history"]
+    // const [, first]["cooking", "art", "history"]
+    const [first] = ["cooking", "art", "history"] 
+        /// 3 elemanli bir array icin sadece tek first yazarsak
+        // bu durumda sadece ilk elemani atar. 
+
+
+    // const [first, second] = ["cooking", "art", "history"] 
+
+
+    console.log(first);
+    // console.log(second);
+
+
+
+
+
+
+        /////////////////
+
+
+        const [, , animal] = ["Horse", "Mouse", "Cat"]
+        console.log(animal)
+
+
+
+        ///////////////////
+
+
+
+        console.log('I');
+        setTimeout(() => {
+        console.log('love');
+            }, 0);
+        console.log('Javascript!');
+
+
+
+
+
+        ////////////////////
+
+
+
+        const foo = {
+        name: 'Noah',
+    };
+
+    // delete foo.name
+    console.log(foo.name);
+
+
+
+
+
+    /// promise, callback func larin problemlerini ortadan kaldirmak icin getirilmis bir yapidir.
+
+
+
+    
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
