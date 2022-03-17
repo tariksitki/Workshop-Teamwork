@@ -3,7 +3,6 @@ let inputId = document.getElementById("input-id");
 let inputName = document.getElementById("input-name");
 let buttonId = document.querySelector(".button-id");
 let buttonName = document.querySelector(".button-name");
-
 let cardsDiv = document.querySelector(".cards-div");
 let fotoList = document.querySelector(".foto-list");
 
@@ -89,6 +88,10 @@ let fotoList = document.querySelector(".foto-list");
     async function buttonIdFunc(PokeId) {
         let response = await fetch(`https://api.pokemontcg.io/v2/cards/?q=id:${PokeId}`);
         let response2 = await response.json();
+            /// local Storage:
+        console.log(response2.data[0]);
+        localStorage.setItem("My Pokemon Foto : ", JSON.stringify(response2.data[0].images.small));
+
         let url = response2.data[0].images.small;
         cardsDiv.innerHTML += `
         <img src="${url}" alt="pokemon">
@@ -127,12 +130,43 @@ let fotoList = document.querySelector(".foto-list");
 
 
 
+        /// inputEvent  and use Api Key  ve arama esnasinda * kullanimi
+        // * kullandigimizda yazdigimiz harf ile baslayan tüm isimleri getirir
+        // bu api ye ait bir özellik
+
+    const API_KEY = "73b1e413-cc79-494d-9972-9ea097005455";
+
+    inputName.addEventListener("input", async (e) => {
+        let name = e.target.value;
+        let response = await axios(`https://api.pokemontcg.io/v2/cards/?q=name:${name}*`,
+        {
+            header : {
+                "X-Api-Key" : API_KEY
+            }
+        });
+
+        fotoList.innerHTML = "";
+
+        if (response.data.data) {
+            response.data.data.forEach((item) => {
+                let url = (item.images.small);
+                let newLi = document.createElement("li");
+                newLi.innerHTML = `<img src="${url}" alt="">`;
+                fotoList.prepend(newLi);
+            })
+        }
+    });
 
 
 
-        /// inputEvent:
 
+            //// local storage dan veri cekme:
+            //// JSON.strinify ile JSON.parse kullanimi farkli  DIKKAT:
+
+    let fromLocalStorage = localStorage.getItem("My Pokemon Foto : ");
+    let fromLocalStorage2 = JSON.parse(localStorage.getItem("My Pokemon Foto : "));
+    console.log(fromLocalStorage);
+    console.log(fromLocalStorage2);
+
+            /// output olarak da parse edilmis veri string icinde olmuyor. parse edilmedi ise console da string icinde oluyor.
         
-
-
- 
